@@ -4,7 +4,7 @@ import Home from "../Pages/Home/Home/Home";
 import AddService from "../Pages/AddService/AddService/AddService";
 import CheckOut from "../Pages/CheckOut/CheckOut/CheckOut";
 import LogMain from "../Pages/Login & Registration/Login/LoginMain/LogMain";
-import RegistrationMain from "../Pages/Login & Registration/Registration/RegistrationMain";
+import RegistrationMain from "../Pages/Login & Registration/Registration/RegistrationMain/RegistrationMain";
 
 const router = createBrowserRouter([
   {

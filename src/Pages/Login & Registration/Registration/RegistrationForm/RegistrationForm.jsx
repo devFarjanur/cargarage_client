@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import img from "../../../assets/images/login/login.svg"
 
-const RegistrationMain = () => {
+const RegistrationForm = () => {
     return (
         <div>
             <div className="pb-40">
@@ -65,9 +65,8 @@ const RegistrationMain = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
 
-export default RegistrationMain;
+export default RegistrationForm;

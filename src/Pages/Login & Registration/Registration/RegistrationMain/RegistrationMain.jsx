@@ -1,15 +1,15 @@
 import Footer from "../../../../Shared/Footer/Footer";
 import Navbar from "../../../../Shared/Navbar/Navbar";
-import LoginForm from "../LoginForm/LoginForm";
+import RegistrationForm from "../RegistrationForm/RegistrationForm";
 
-const LogMain = () => {
+const RegistrationMain = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <LoginForm></LoginForm>
+            <RegistrationForm></RegistrationForm>
             <Footer></Footer>
         </div>
     );
 };
 
-export default LogMain;
+export default RegistrationMain;
