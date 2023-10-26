@@ -1,8 +1,8 @@
 
-const Contact = () => {
+const AddressContact = () => {
     return (
-        <div className="my-5">
-            <div className="stats stats-vertical lg:stats-horizontal w-full bg-black text-white rounded-lg">
+        <div className="mt-5">
+            <div className="stats stats-vertical lg:stats-horizontal w-full bg-black text-white">
 
                 <div className="stat py-28 ml-24">
                     <div>
@@ -30,4 +30,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default AddressContact;

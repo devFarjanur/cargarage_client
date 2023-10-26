@@ -1,6 +1,6 @@
 import About from "../About/About";
+import AddressContact from "../AddressContact/AddressContact";
 import Banner from "../Banner/Banner";
-import Contact from "../Contact/Contact";
 import Features from "../Features/Features";
 import Product from "../Product/Product";
 import Service from "../Service/Service";
@@ -13,7 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <About></About>
             <Service></Service>
-            <Contact></Contact>
+            <AddressContact></AddressContact>
             <Product></Product>
             <Team></Team>
             <Features></Features>

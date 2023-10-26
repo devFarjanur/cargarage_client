@@ -5,6 +5,7 @@ import AddService from "../Pages/AddService/AddService/AddService";
 import CheckOut from "../Pages/CheckOut/CheckOut/CheckOut";
 import LogMain from "../Pages/Login & Registration/Login/LoginMain/LogMain";
 import RegistrationMain from "../Pages/Login & Registration/Registration/RegistrationMain/RegistrationMain";
+import ContactMain from "../Pages/Contact/ContactMain/ContactMain";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,12 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>
       }
+
     ]
+  },
+  {
+    path: "/contact",
+    element: <ContactMain></ContactMain>
   },
   {
     path: "/addService",
