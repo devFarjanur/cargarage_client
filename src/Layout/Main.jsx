@@ -1,4 +1,5 @@
-import Home from "../Pages/Home/Home/Home";
+
+import Home from "../Pages/Home/HomeMain/HomeMain";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 import './Main.css';
