@@ -7,6 +7,8 @@ import LogMain from "../Pages/Login & Registration/Login/LoginMain/LogMain";
 import RegistrationMain from "../Pages/Login & Registration/Registration/RegistrationMain/RegistrationMain";
 import ContactMain from "../Pages/Contact/ContactMain/ContactMain";
 import ProductsMain from "../Pages/Products/ProductsMain/ProductsMain";
+import AdminLogin from "../AdminPage/AdminLogin/AdminLogin";
+import AdminDasboardMain from "../AdminPage/AdminDashboard/AdminDashboardMain/AdminDasboardMain";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +44,14 @@ const router = createBrowserRouter([
   {
     path: "/registration",
     element: <RegistrationMain></RegistrationMain>
+  },
+  {
+    path: "/admin",
+    element: <AdminLogin></AdminLogin>
+  },
+  {
+    path: "/adminDasboard",
+    element: <AdminDasboardMain></AdminDasboardMain>
   }
 ]);
 
