@@ -9,6 +9,7 @@ import ContactMain from "../Pages/Contact/ContactMain/ContactMain";
 import ProductsMain from "../Pages/Products/ProductsMain/ProductsMain";
 import AdminLogin from "../AdminPage/AdminLogin/AdminLogin";
 import AdminDasboardMain from "../AdminPage/AdminDashboard/AdminDashboardMain/AdminDasboardMain";
+import AdminAddProduct from "../AdminPage/AdminProduct/AdminAddProduct/AdminAddProduct";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/adminDasboard",
     element: <AdminDasboardMain></AdminDasboardMain>
+  },
+  {
+    path: "/adminDasboard/addProduct",
+    element: <AdminAddProduct></AdminAddProduct>
   }
 ]);
 
