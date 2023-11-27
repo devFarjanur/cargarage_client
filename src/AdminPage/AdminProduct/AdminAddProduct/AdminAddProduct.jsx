@@ -1,28 +1,54 @@
-import { useState } from 'react';
+
 import AdminNavbar from '../../Shared/AdminNavbar/AdminNavbar';
+// import Swal from 'sweetalert2'
 
 const AdminAddProduct = () => {
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-        message: '',
-    });
+    const handleAddProduct = event => {
+        event.preventDefault();
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // You can handle form submission here, e.g., send data to a server or perform client-side actions.
-    };
+        const form = event.target;
+
+        const productId = form.productId.value;
+        const productImage = form.productImage.value;
+        const productName = form.productName.value;
+        const productPrice = form.productPrice.value;
+        const productDescription = form.productName.value;
+
+
+        const addProduct = { productId, productImage, productName, productPrice, productDescription };
+
+
+        console.log(addProduct);
+
+        // send data to server
+
+        fetch('http://localhost:5000/product', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addProduct)
+        })
+        .then( res => res.json)
+        .then( data => {
+            console.log(data)
+            
+        })
+
+
+    }
+
+    // products image
+
+    // https://i.ibb.co/ZYqsWg7/1.png  Car Break
+    // https://i.ibb.co/L6DMVSw/2.png  Car Break
+    // https://i.ibb.co/VWvJrKW/3.png  Engine Cooler
+    // https://i.ibb.co/XJPDkh9/4.png  Car Battery
+    // https://i.ibb.co/Xp4Lymc/5.png  Car Tier
+    // https://i.ibb.co/mh5VSrt/6.png  Car Engine Plug
+
 
     return (
         <div>
@@ -30,30 +56,24 @@ const AdminAddProduct = () => {
             <div className=''>
                 <div className="bg-slate-300 drop-shadow-md">
                     <div className="w-full mx-auto px-24 pb-24">
-                    <div>
-                        <h2 className='text-black text-2xl text-center py-10 font-semibold'>Upload Product</h2>
-                    </div>
+                        <div>
+                            <h2 className='text-black text-2xl text-center py-10 font-semibold'>Upload Product</h2>
+                        </div>
 
-                        <form className="mt-4 " onSubmit={handleSubmit}>
+                        <form className="mt-4 " onSubmit={handleAddProduct}>
                             <div className="mb-6 grid grid-cols-2 gap-x-6"> {/* Add the 'grid' class and specify the gap */}
                                 <div>
                                     <input
                                         type="text"
-                                        id="name"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
+                                        name="productId"
                                         className="w-full h-[60px] bg-white px-6 py-2 text-[#A2A2A2] border-none rounded-lg"
                                         placeholder="Product Id"
                                     />
                                 </div>
                                 <div>
                                     <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
+                                        type="text"
+                                        name="productImage"
                                         className="w-full h-[60px] bg-white px-6 py-2 text-[#A2A2A2] border-none rounded-lg"
                                         placeholder="Product Image"
                                     />
@@ -63,22 +83,16 @@ const AdminAddProduct = () => {
                             <div className="mb-6 grid grid-cols-2 gap-x-6"> {/* Add the 'grid' class and specify the gap */}
                                 <div>
                                     <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
+                                        type="text"
+                                        name="productName"
                                         className="w-full h-[60px] bg-white px-6 py-2 text-[#A2A2A2] border-none rounded-lg"
                                         placeholder="Product Name"
                                     />
                                 </div>
                                 <div>
                                     <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
+                                        type="text"
+                                        name="productPrice"
                                         className="w-full h-[60px] bg-white px-6 py-2 text-[#A2A2A2] border-none rounded-lg"
                                         placeholder="Product Price"
                                     />
@@ -89,9 +103,7 @@ const AdminAddProduct = () => {
                             <div className="mb-6">
                                 <textarea
                                     id="message"
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
+                                    name="productDescription"
                                     className="w-full h-[250px] bg-white px-6 py-2 text-[#A2A2A2] border-none rounded-lg"
                                     rows="4"
                                     placeholder="Product Description"

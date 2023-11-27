@@ -8,8 +8,8 @@ import RegistrationMain from "../Pages/Login & Registration/Registration/Registr
 import ContactMain from "../Pages/Contact/ContactMain/ContactMain";
 import ProductsMain from "../Pages/Products/ProductsMain/ProductsMain";
 import AdminLogin from "../AdminPage/AdminLogin/AdminLogin";
-import AdminDasboardMain from "../AdminPage/AdminDashboard/AdminDashboardMain/AdminDasboardMain";
 import AdminAddProduct from "../AdminPage/AdminProduct/AdminAddProduct/AdminAddProduct";
+import AdminProducts from "../AdminPage/AdminProduct/AdminProducts/AdminProducts";
 
 const router = createBrowserRouter([
   {
@@ -51,11 +51,11 @@ const router = createBrowserRouter([
     element: <AdminLogin></AdminLogin>
   },
   {
-    path: "/adminDasboard",
-    element: <AdminDasboardMain></AdminDasboardMain>
+    path: "/adminProducts",
+    element: <AdminProducts></AdminProducts>
   },
   {
-    path: "/adminDasboard/addProduct",
+    path: "/adminProducts/addProduct",
     element: <AdminAddProduct></AdminAddProduct>
   }
 ]);

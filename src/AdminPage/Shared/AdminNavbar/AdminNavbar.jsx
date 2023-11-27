@@ -5,7 +5,7 @@ const AdminNavbar = () => {
     const navItems = (
 
         <>
-            <li> <Link to='/adminDashboard'>Product</Link></li>
+            <li> <Link to='/adminProducts'>Product</Link></li>
             <li> <Link to='/service'>Service</Link></li>
             <li> <Link to='/order'>Order</Link></li>
             <li> <Link to='/customer'>Customer</Link></li>
