@@ -34,7 +34,7 @@ const AdminLogin = () => {
                         </div>
                         <div className="px-20px mt-7">
                             <Link
-                                to="/adminDasboard"
+                                to="/adminproduct"
                                 className="block w-[461px] h-[64px] bg-[#FF3811] hover:bg-[#FF3811] text-white text-xl font-semibold rounded-md text-center py-3"
                             >
                                 Log In

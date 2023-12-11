@@ -1,6 +1,8 @@
 
-import AdminNavbar from '../../Shared/AdminNavbar/AdminNavbar';
-// import Swal from 'sweetalert2'
+
+import Swal from "sweetalert2";
+import AdminNavbar from "./AdminNavbar";
+import AdminFooter from "./AdminFooter";
 
 const AdminAddProduct = () => {
 
@@ -14,7 +16,7 @@ const AdminAddProduct = () => {
         const productImage = form.productImage.value;
         const productName = form.productName.value;
         const productPrice = form.productPrice.value;
-        const productDescription = form.productName.value;
+        const productDescription = form.productDescription.value;
 
 
         const addProduct = { productId, productImage, productName, productPrice, productDescription };
@@ -31,11 +33,22 @@ const AdminAddProduct = () => {
             },
             body: JSON.stringify(addProduct)
         })
-        .then( res => res.json)
-        .then( data => {
-            console.log(data)
-            
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product added successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                    // Delay for * seconds before reloading the website
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 4000); // Adjust the delay time as needed
+                }
+            })
 
 
     }
@@ -53,8 +66,8 @@ const AdminAddProduct = () => {
     return (
         <div>
             <AdminNavbar></AdminNavbar>
-            <div className=''>
-                <div className="bg-slate-300 drop-shadow-md">
+            <div className='px-14 py-12'>
+                <div className="bg-slate-300 drop-shadow-2xl rounded">
                     <div className="w-full mx-auto px-24 pb-24">
                         <div>
                             <h2 className='text-black text-2xl text-center py-10 font-semibold'>Upload Product</h2>
@@ -118,6 +131,7 @@ const AdminAddProduct = () => {
                     </div>
                 </div>
             </div>
+            <AdminFooter></AdminFooter>
         </div>
     );
 };
