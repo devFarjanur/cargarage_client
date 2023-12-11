@@ -1,5 +1,5 @@
 
-const Contact = () => {
+const HomeContact = () => {
     return (
         <div className="my-5">
             <div className="stats stats-vertical lg:stats-horizontal w-full bg-black text-white rounded-lg">
@@ -30,4 +30,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default HomeContact;

@@ -1,27 +1,36 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../Layout/Main";
-import Home from "../Pages/Home/Home/Home";
-import AddService from "../Pages/AddService/AddService/AddService";
-import CheckOut from "../Pages/CheckOut/CheckOut/CheckOut";
+
+import Home from "../Pages/Home";
+import About from "../Pages/About";
+import Services from "../Pages/Services";
+import Products from "../Pages/Products";
+import Contact from "../Pages/Contact";
+import AdminLogin from "../AdminPages/AdminLogin";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main></Main>,
-    children: [
-      {
-        path: "/",
-        element: <Home></Home>
-      }
-    ]
+    element: <Home></Home>
   },
   {
-    path: "/addService",
-    element: <AddService></AddService>
+    path: "/about",
+    element: <About></About>
   },
   {
-    path: "/checkOut",
-    element: <CheckOut></CheckOut>
+    path: "/services",
+    element: <Services></Services>
+  },
+  {
+    path: "/products",
+    element: <Products></Products>
+  },
+  {
+    path: "/contact",
+    element: <Contact></Contact>
+  },
+  {
+    path: "/admin",
+    element: <AdminLogin></AdminLogin>
   }
 ]);
 

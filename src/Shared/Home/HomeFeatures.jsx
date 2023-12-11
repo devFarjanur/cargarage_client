@@ -1,5 +1,5 @@
 
-const Features = () => {
+const HomeFeatures = () => {
     return (
         <div>
             <div className="px-72 text-center">
@@ -11,4 +11,4 @@ const Features = () => {
     );
 };
 
-export default Features;
+export default HomeFeatures;

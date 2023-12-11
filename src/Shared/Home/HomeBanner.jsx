@@ -1,14 +1,14 @@
-import './Banner.css';
-import img1 from '../../../assets/images/banner/1.jpg'
-import img2 from '../../../assets/images/banner/2.jpg'
-import img3 from '../../../assets/images/banner/3.jpg'
-import img4 from '../../../assets/images/banner/4.jpg'
-import img5 from '../../../assets/images/banner/5.jpg'
-import img6 from '../../../assets/images/banner/6.jpg'
+
+import img1 from '../../assets/images/banner/1.jpg'
+import img2 from '../../assets/images/banner/2.jpg'
+import img3 from '../../assets/images/banner/3.jpg'
+import img4 from '../../assets/images/banner/4.jpg'
+import img5 from '../../assets/images/banner/5.jpg'
+import img6 from '../../assets/images/banner/6.jpg'
 
 
 
-const Banner = () => {
+const HomeBanner = () => {
     return (
         <div className="carousel w-full h-[600px] mt-3.5">
             <div id="slide1" className="carousel-item relative w-full">
@@ -123,4 +123,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default HomeBanner;
