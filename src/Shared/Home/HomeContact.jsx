@@ -1,9 +1,8 @@
 
-<<<<<<<< HEAD:src/Shared/Home/HomeContact.jsx
+
 const HomeContact = () => {
-========
-const AddressContact = () => {
->>>>>>>> 0c0b412165a73a1218982b2d188ac4a5fcc7c3dc:src/Pages/Home/AddressContact/AddressContact.jsx
+
+
     return (
         <div className="mt-5">
             <div className="stats stats-vertical lg:stats-horizontal w-full bg-black text-white">
@@ -34,8 +33,6 @@ const AddressContact = () => {
     );
 };
 
-<<<<<<<< HEAD:src/Shared/Home/HomeContact.jsx
+
 export default HomeContact;
-========
-export default AddressContact;
->>>>>>>> 0c0b412165a73a1218982b2d188ac4a5fcc7c3dc:src/Pages/Home/AddressContact/AddressContact.jsx
+
