@@ -10,9 +10,9 @@ import img6 from '../../assets/images/banner/6.jpg'
 
 const HomeBanner = () => {
     return (
-        <div className="carousel w-full h-[600px] mt-3.5">
+        <div className="carousel w-full h-[600px] mt-3.5 rounded">
             <div id="slide1" className="carousel-item relative w-full">
-                <img src={img1} className="w-full rounded-xl " />
+                <img src={img1} className="w-full" />
                 <div className="h-full w-full flex items-center absolute  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)]">
                     <div className='text-white space-y-7 w-2/4 pl-20'>
                         <h2 className='text-6xl font-bold'>Affordable Price For Car Servicing</h2>
