@@ -1,13 +1,47 @@
 
 import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const AdminProduct = (props) => {
 
-    const { productImage, productName, productPrice } = props.product;
+    const { _id, productImage, productName, productPrice } = props.product;
 
     const handleDelete = _id => {
         console.log(_id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/product/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Prooduct has been deleted.",
+                                icon: "success"
+                            });
+                            // Delay for 2 seconds before reloading the website
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 4000); // Adjust the delay time as needed
+                        }
+                    })
+
+
+            }
+        });
     }
 
 
@@ -25,9 +59,9 @@ const AdminProduct = (props) => {
                         <Link to>
                             <button className="btn btn-primary">Details</button>
                         </Link>
-                        <button 
-                        onClick={() => handleDelete(_id)} 
-                        className="btn btn-primary">Delete</button>
+                        <button
+                            onClick={() => handleDelete(_id)}
+                            className="btn btn-primary">Delete</button>
 
                     </div>
                 </div>
@@ -42,7 +76,7 @@ const AdminProducts = () => {
 
 
     const products = useLoaderData();
-    console.log('Product:', products);
+
 
     return (
         <div className="flex flex-col sm:flex-row ">
