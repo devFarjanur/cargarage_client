@@ -9,7 +9,7 @@ import {
 import router from './Router/Router';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm mx-auto">
+  <div className='px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14'>
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>

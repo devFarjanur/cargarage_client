@@ -2,10 +2,10 @@
 const HomeService = () => {
     return (
         <div>
-            <div className="px-72 text-center">
-                <p className="text-[#FF3811] text-xl font-bold">Service</p>
-                <h1 className="text-5xl font-bold text-black">Our Service Area</h1>
-                <p className="text-[#737373]">The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+            <div className="px-16 lg:px-28 text-center">
+                <p className="text-[#FF3811] text-xl lg:text-2xl font-bold">Service</p>
+                <h1 className="text-3xl lg:text-4xl font-bold text-black">Our Service Area</h1>
+                <p className="text-lg text-[#737373]">The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
             </div>
             <div className="card w-96 bg-white shadow-xl">
                 <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
