@@ -4,9 +4,10 @@ import Products from "../Pages/Products";
 import Services from "../Pages/Services";
 import Contact from "../Pages/Contact";
 import AdminLogin from "../AdminPages/AdminLogin";
-import Admin from "../AdminPages/Admin";
 import AdminAddProduct from "../Shared/Admin/AdminAddProduct";
-import AdminProducts from "../Shared/Admin/AdminProducts";
+import AdminMainProduct from "../AdminPages/AdminMainProduct";
+import AdminMainService from "../AdminPages/AdminMainService";
+import AdminAddService from "../Shared/Admin/AdminAddService";
 
 
 
@@ -34,14 +35,22 @@ const router = createBrowserRouter([
   },
   {
     path: "/adminproduct",
-    element: <Admin></Admin>,
+    element: <AdminMainProduct></AdminMainProduct>,
     loader: () => fetch(`http://localhost:5000/product`)
   },
   {
     path: "/adminproduct/adminaddproduct",
     element: <AdminAddProduct></AdminAddProduct>
+  },
+  {
+    path:"/adminservice",
+    element: <AdminMainService></AdminMainService>,
+    loader: () => fetch(`http://localhost:5000/service`)
+  },
+  {
+    path: "/adminservice/adminaddservice",
+    element: <AdminAddService></AdminAddService>
   }
-  
 ]);
 
 export default router;

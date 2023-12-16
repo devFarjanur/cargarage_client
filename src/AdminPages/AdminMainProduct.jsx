@@ -3,7 +3,7 @@ import AdminNavbar from "../Shared/Admin/AdminNavbar";
 import AdminProducts from "../Shared/Admin/AdminProducts";
 
 
-const Admin = () => {
+const AdminMainProduct = () => {
     return (
         <div>
             <AdminNavbar></AdminNavbar>
@@ -13,4 +13,4 @@ const Admin = () => {
     );
 };
 
-export default Admin;
+export default AdminMainProduct;

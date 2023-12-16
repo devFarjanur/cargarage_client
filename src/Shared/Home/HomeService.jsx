@@ -2,7 +2,7 @@
 const HomeService = () => {
     return (
         <div>
-            <div className="px-16 lg:px-28 text-center">
+            <div className="px-16 lg:px-52 2xl:px-72 text-center">
                 <p className="text-[#FF3811] text-xl lg:text-2xl font-bold">Service</p>
                 <h1 className="text-3xl lg:text-4xl font-bold text-black">Our Service Area</h1>
                 <p className="text-lg text-[#737373]">The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
