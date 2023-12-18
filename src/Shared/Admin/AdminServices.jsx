@@ -18,7 +18,7 @@ const AdminService = (props) => {
         }).then((result) => {
 
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/service/${_id}`, {
+                fetch(`https://cargarage.onrender.com/service/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -44,7 +44,7 @@ const AdminService = (props) => {
 
     return (
 
-        <div className="w-[260px] md:w-[300px] lg:w-[275px] xl:w-[320px] mx-auto">
+        <div className="w-[260px] md:w-[300px] lg:w-[275px] xl:w-[265px] mx-auto">
             <div className="card w-full bg-white shadow-2xl">
                 <figure className="px-6 pt-6">
                     <img src={serviceImage} alt="" className="rounded-xl w-[200px] h-[200px] object-cover" />

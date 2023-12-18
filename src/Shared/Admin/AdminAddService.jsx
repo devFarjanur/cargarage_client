@@ -19,7 +19,7 @@ const AdminAddService = () => {
 
         console.log(addService);
 
-        fetch('http://localhost:5000/service', {
+        fetch('https://cargarage.onrender.com/service', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

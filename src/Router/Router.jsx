@@ -46,7 +46,7 @@ const router = createBrowserRouter([
   {
     path: "/adminproduct",
     element: <AdminMainProduct></AdminMainProduct>,
-    loader: () => fetch(`http://localhost:5000/product`)
+    loader: () => fetch(`https://cargarage.onrender.com/product`)
   },
   {
     path: "/adminproduct/adminaddproduct",
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
   {
     path:"/adminservice",
     element: <AdminMainService></AdminMainService>,
-    loader: () => fetch(`http://localhost:5000/service`)
+    loader: () => fetch(`https://cargarage.onrender.com/service`)
   },
   {
     path: "/adminservice/adminaddservice",
