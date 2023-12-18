@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     element: <Contact></Contact>
   },
   {
-    path: "/admin",
+    path: "https://main--cargareg.netlify.app/admin",
     element: <AdminLogin></AdminLogin>,
   },
   {
