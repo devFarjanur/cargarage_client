@@ -38,7 +38,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <Link to="/login" className="btn bg-white text-lg hover:bg-white">
-                        Login
+                        Log in
                     </Link>
 
                 </div>

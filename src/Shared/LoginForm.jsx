@@ -9,7 +9,7 @@ const LoginForm = () => {
                     <img src={img} alt="Album" className="mx-auto w-[460px] h-[500px]" />
                 </div>
                 <div className="pr-10 border-[1px] border-[#D0D0D0] w-[611px] h-[782px] mt-20 px-20 bg-white rounded shadow-md">
-                    <h2 className="text-4xl font-semibold text-center pt-20 pb-8 text-black">Login</h2>
+                    <h2 className="text-4xl font-semibold text-center pt-20 pb-8 text-black">Log in</h2>
                     <form className="mt-4">
                         <div className="mb-4">
                             <label htmlFor="username" className="text-[#444] text-lg font-medium mb-5">
@@ -48,6 +48,10 @@ const LoginForm = () => {
                     <div>
                         <p className="text-center pt-10">Create New Account? <Link to="/registration" className='text-[#FF3811]'>Sign Up</Link></p>
                     </div>
+                    <div>
+                        <p className="text-center pt-10">Login as an <Link to="/admin" className='text-[#FF3811]'>Admin</Link>? or <Link to="/" className='text-[#FF3811]'>Home</Link></p>
+                    </div>
+                
                 </div>
             </div>
         </div>

@@ -62,6 +62,9 @@ const RegistrationForm = () => {
                         <div>
                             <p className="text-center pt-10">Already Have an Account? <Link to="/logIn" className='text-[#FF3811]'>Login</Link></p>
                         </div>
+                        <div>
+                            <p className="text-center pt-10">Login as an <Link to="/admin" className='text-[#FF3811]'>Admin</Link>? or <Link to="/" className='text-[#FF3811]'>Home</Link></p>
+                        </div>
                     </div>
                 </div>
             </div>
