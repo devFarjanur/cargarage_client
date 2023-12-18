@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import img from "../../../../assets/images/login/login.svg";
+import img from "../assets/images/login/login.svg";
 
 const RegistrationForm = () => {
     return (

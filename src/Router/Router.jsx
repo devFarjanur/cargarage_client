@@ -8,6 +8,8 @@ import AdminAddProduct from "../Shared/Admin/AdminAddProduct";
 import AdminMainProduct from "../AdminPages/AdminMainProduct";
 import AdminMainService from "../AdminPages/AdminMainService";
 import AdminAddService from "../Shared/Admin/AdminAddService";
+import LoginForm from "../Shared/LoginForm";
+import RegistrationForm from "../Shared/RegistrationForm";
 
 
 
@@ -30,7 +32,15 @@ const router = createBrowserRouter([
     element: <Contact></Contact>
   },
   {
-    path: "https://main--cargareg.netlify.app/admin",
+    path: "/login",
+    element: <LoginForm></LoginForm>
+  },
+  {
+    path: "/registration",
+    element: <RegistrationForm></RegistrationForm>
+  },
+  {
+    path: "/admin",
     element: <AdminLogin></AdminLogin>,
   },
   {
