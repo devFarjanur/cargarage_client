@@ -15,7 +15,7 @@ const AdminNavbar = () => {
     );
 
     return (
-        <div>
+        <div className="max-w-screen-2xl mx-auto">
             <div className="navbar bg-white border-[0px] text-black">
                 <div className="navbar-start">
                     <div className="dropdown">

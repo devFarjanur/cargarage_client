@@ -10,6 +10,8 @@ import AdminMainService from "../AdminPages/AdminMainService";
 import AdminAddService from "../Shared/Admin/AdminAddService";
 import LoginForm from "../Shared/LoginForm";
 import RegistrationForm from "../Shared/RegistrationForm";
+import HomeServices from "../Shared/Home/HomeServices";
+import HomeProducts from "../Shared/Home/HomeProducts";
 
 
 
@@ -17,15 +19,28 @@ import RegistrationForm from "../Shared/RegistrationForm";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>
+    element: <Home></Home>,
+    loader: () => fetch(`https://cargarage.onrender.com/service`)
   },
+  // {
+  //   path: "/homeservice",
+  //   element: <HomeServices></HomeServices>,
+  //   loader: () => fetch(`https://cargarage.onrender.com/service`)
+  // },
+  // {
+  //   path: "/homeproduct",
+  //   element: <HomeProducts></HomeProducts>,
+  //   loader: () => fetch(`https://cargarage.onrender.com/product`)
+  // },
   {
     path: "/product",
-    element: <Products></Products>
+    element: <Products></Products>,
+    loader: () => fetch(`https://cargarage.onrender.com/product`)
   },
   {
     path: "/service",
-    element: <Services></Services>
+    element: <Services></Services>,
+    loader: () => fetch(`https://cargarage.onrender.com/service`)
   },
   {
     path: "/contact",

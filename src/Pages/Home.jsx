@@ -4,8 +4,8 @@ import HomeAbout from "../Shared/Home/HomeAbout";
 import HomeBanner from "../Shared/Home/HomeBanner";
 import HomeContact from "../Shared/Home/HomeContact";
 import HomeFeatures from "../Shared/Home/HomeFeatures";
-import HomeProduct from "../Shared/Home/HomeProduct";
-import HomeService from "../Shared/Home/HomeService";
+import HomeProducts from "../Shared/Home/HomeProducts";
+import HomeServices from "../Shared/Home/HomeServices";
 import HomeTeam from "../Shared/Home/HomeTeam";
 import Navbar from "../Shared/Navbar";
 
@@ -17,9 +17,9 @@ const Home = () => {
             <Navbar></Navbar>
             <HomeBanner></HomeBanner>
             <HomeAbout></HomeAbout>
-            <HomeService></HomeService>
+            <HomeServices></HomeServices>
             <HomeContact></HomeContact>
-            <HomeProduct></HomeProduct>
+            <HomeProducts></HomeProducts>
             <HomeTeam></HomeTeam>
             <HomeFeatures></HomeFeatures>
             <Footer></Footer>
