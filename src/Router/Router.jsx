@@ -35,11 +35,13 @@ const router = createBrowserRouter([
   // },
   {
     path: "/product",
-    element: <Products></Products>
+    element: <Products></Products>,
+    loader: () => fetch(`https://cargarage.onrender.com/product`)
   },
   {
     path: "/service",
-    element: <Services></Services>
+    element: <Services></Services>,
+    loader: () => fetch(`https://cargarage.onrender.com/service`)
   },
   {
     path: "/contact",

@@ -1,4 +1,4 @@
-import img from '../../../assets/images/banner/4.jpg';
+import img from '../../assets/images/banner/4.jpg';
 
 
 const ServiceBanner = () => {
@@ -12,7 +12,7 @@ const ServiceBanner = () => {
                         <div className='text-white space-y-7 w-2/4 pl-20'>
                             <h2 className='text-4xl font-bold'>Add New Service</h2>
                             <div className='absolute bottom-0 left-0 right-0 text-center'>
-                                <button className="btn bg-[#FF3811] hover:bg-[#FF3811] text-white text-xl font-normal px-16 border-none">Home/Service</button>
+                                <button className="btn bg-[#FF3811] hover:bg-[#FF3811] text-white text-xl font-semibold px-16 border-none">Home/Services</button>
                             </div>
                         </div>
                     </div>
