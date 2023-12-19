@@ -30,11 +30,17 @@ const HomeServices = () => {
 
     const services = useLoaderData();
 
+    console.log("Services:", services);
+
+    if (!services || services.length === 0) {
+        return <div>No services available</div>;
+      }
+
     return (
-        <div className="max-w-screen-xl mx-auto">
-            <div className="px-16 lg:px-52 2xl:px-72 text-center">
+        <div className="max-w-screen-xl mx-auto my-10">
+            <div className="px-10 mb-5 lg:px-20 xl:px-48 text-center">
                 <p className="text-[#FF3811] text-xl lg:text-2xl font-bold">Service</p>
-                <h1 className="text-3xl lg:text-4xl font-bold text-black">Our Service Area</h1>
+                <h1 className="my-1 text-3xl lg:text-4xl font-bold text-black">Our Service Area</h1>
                 <p className="text-lg text-[#737373]">The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
             </div>
             <div className="py-6 grid grid-cols-1 gap-4 md:py-8 sm:py-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

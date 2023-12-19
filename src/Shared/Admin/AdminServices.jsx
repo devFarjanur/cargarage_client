@@ -79,8 +79,8 @@ const AdminServices = () => {
     return (
         <div>
             <div className="flex flex-col sm:flex-row ">
-                <div className="w-full">
-                    <div className="p-4 sm:p-8 md:p-10 bg-white rounded shadow-xl">
+                <div className="max-w-screen-2xl mx-auto my-10">
+                    <div className="p-4 sm:p-8 md:p-10 bg-white rounded shadow-2xl">
                         <div className="flex justify-between items-center">
                             <h2 className="text-3xl text-black font-medium">Service List</h2>
                             <div className="card-actions">
