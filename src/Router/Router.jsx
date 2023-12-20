@@ -12,6 +12,7 @@ import LoginForm from "../Shared/LoginForm";
 import RegistrationForm from "../Shared/RegistrationForm";
 import SingleProduct from "../Shared/Product/SingleProduct";
 import AdminSingleProduct from "../Shared/Admin/AdminSingleProduct";
+import SingleService from "../Shared/Service/SingleService";
 
 
 
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
     path: "/service",
     element: <Services></Services>,
     loader: () => fetch(`https://cargarage.onrender.com/service`)
+  },
+  {
+    path: "/service/singleservice/:id",
+    element: <SingleService></SingleService>,
+    loader: ({params}) => fetch(`https://cargarage.onrender.com/service/${params.id}`)
   },
   {
     path: "/contact",

@@ -6,25 +6,30 @@ import ProductsBanner from "../Shared/Product/ProductsBanner";
 
 const Product = (props) => {
 
-    const { productImage, productName, productPrice } = props.product;
+    const { _id, productImage, productName, productPrice } = props.product;
 
     return (
         <div className="w-[290px] md:w-[345px] lg:w-[305px] xl:w-[285px] 2xl:w-[310px] mx-auto">
-            <div className="card w-full bg-white shadow-2xl">
-                <figure className="px-6 pt-6">
-                    <img src={productImage} alt="" className="rounded-xl w-[200px] h-[200px] object-cover" />
-                </figure>
-                <div className="card-body items-center text-center p-6">
-                    <h2 className="text-black text-xl font-semibold">{productName}</h2>
-                    <p className="text-black text-lg font-semibold">{productPrice}</p>
-                    <div className="card-actions mt-4">
-                        <Link to>
-                            <button className="btn btn-primary">buy now</button>
-                        </Link>
 
+            <Link to={`/product/singleproduct/${_id}`}>
+                <div className="card w-full bg-white shadow-2xl">
+                    <figure className="px-6 pt-6">
+                        <img src={productImage} alt="" className="rounded-xl w-[200px] h-[200px] object-cover border-2 object-cover" />
+                    </figure>
+                    <div className="card-body items-center text-center p-6">
+                        <h2 className="text-black text-xl font-semibold">{productName}</h2>
+                        <p className="text-black text-lg font-semibold">{productPrice}</p>
+                        <div className="card-actions mt-4">
+                            <Link to>
+                                <button className="btn btn-primary">Add To Cart</button>
+                            </Link>
+
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
+
+
         </div>
     );
 };

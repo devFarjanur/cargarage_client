@@ -5,25 +5,29 @@ import ServiceBanner from "../Shared/Service/ServiceBanner";
 
 const Service = (props) => {
 
-    const { serviceImage, serviceName, servicePrice } = props.service;
+    const { _id, serviceImage, serviceName, servicePrice } = props.service;
 
     return (
         <div className="w-[290px] md:w-[345px] lg:w-[305px] xl:w-[285px] 2xl:w-[310px] mx-auto">
-            <div className="card w-full bg-white shadow-2xl">
-                <figure className="px-6 pt-6">
-                    <img src={serviceImage} alt="" className="rounded-xl w-[200px] h-[200px] object-cover" />
-                </figure>
-                <div className="card-body items-center text-center p-6">
-                    <h2 className="text-black text-xl font-semibold">{serviceName}</h2>
-                    <p className="text-black text-lg font-semibold">{servicePrice}</p>
-                    <div className="card-actions mt-4">
-                        <Link to>
-                            <button className="btn btn-primary">Appoinment</button>
-                        </Link>
-                    
+
+            <Link to={`/service/singleservice/${_id}`}>
+                <div className="card w-full bg-white shadow-2xl">
+                    <figure className="px-6 pt-6">
+                        <img src={serviceImage} alt="" className="rounded-xl w-[200px] h-[200px] object-cover" />
+                    </figure>
+                    <div className="card-body items-center text-center p-6">
+                        <h2 className="text-black text-xl font-semibold">{serviceName}</h2>
+                        <p className="text-black text-lg font-semibold">{servicePrice}</p>
+                        <div className="card-actions mt-4">
+                            <Link to>
+                                <button className="btn btn-primary">Appoinment</button>
+                            </Link>
+
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
+
         </div>
 
 
