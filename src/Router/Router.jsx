@@ -10,6 +10,8 @@ import AdminMainService from "../AdminPages/AdminMainService";
 import AdminAddService from "../Shared/Admin/AdminAddService";
 import LoginForm from "../Shared/LoginForm";
 import RegistrationForm from "../Shared/RegistrationForm";
+import SingleProduct from "../Shared/Product/SingleProduct";
+import AdminSingleProduct from "../Shared/Admin/AdminSingleProduct";
 
 
 
@@ -39,6 +41,11 @@ const router = createBrowserRouter([
     loader: () => fetch(`https://cargarage.onrender.com/product`)
   },
   {
+    path: "/product/singleproduct/:id",
+    element: <SingleProduct></SingleProduct>,
+    loader: ({params}) => fetch(`https://cargarage.onrender.com/product/${params.id}`)
+  },
+  {
     path: "/service",
     element: <Services></Services>,
     loader: () => fetch(`https://cargarage.onrender.com/service`)
@@ -63,6 +70,11 @@ const router = createBrowserRouter([
     path: "/adminproduct",
     element: <AdminMainProduct></AdminMainProduct>,
     loader: () => fetch(`https://cargarage.onrender.com/product`)
+  },
+  {
+    path: "/adminproduct/adminsingleproduct/:id",
+    element: <AdminSingleProduct></AdminSingleProduct>,
+    loader: ({params}) => fetch(`https://cargarage.onrender.com/product/${params.id}`)
   },
   {
     path: "/adminproduct/adminaddproduct",

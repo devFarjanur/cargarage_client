@@ -56,7 +56,7 @@ const AdminProduct = (props) => {
                     <h2 className="text-black text-xl font-semibold">{productName}</h2>
                     <p className="text-black text-lg font-semibold">{productPrice}</p>
                     <div className="card-actions mt-4">
-                        <Link to>
+                        <Link to={`/adminproduct/adminsingleproduct/${_id}`}>
                             <button className="btn btn-primary">Details</button>
                         </Link>
                         <button
