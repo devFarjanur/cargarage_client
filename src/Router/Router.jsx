@@ -13,7 +13,7 @@ import RegistrationForm from "../Shared/RegistrationForm";
 import SingleProduct from "../Shared/Product/SingleProduct";
 import AdminSingleProduct from "../Shared/Admin/AdminSingleProduct";
 import SingleService from "../Shared/Service/SingleService";
-
+import ProductMainCart from "../Pages/ProductMainCart";
 
 
 
@@ -40,6 +40,10 @@ const router = createBrowserRouter([
     path: "/product",
     element: <Products></Products>,
     loader: () => fetch(`https://cargarage.onrender.com/product`)
+  },
+  {
+    path: "/cart",
+    element: <ProductMainCart></ProductMainCart>
   },
   {
     path: "/product/singleproduct/:id",

@@ -8,6 +8,10 @@ const SingleProduct = () => {
 
     const { _id, productImage, productName, productPrice, productDescription } = products;
 
+    const addToCart = _id => {
+        console.log(_id);
+      };
+
     return (
         <div>
             <Navbar></Navbar>
@@ -28,7 +32,7 @@ const SingleProduct = () => {
                         <p className="text-gray-700 text-2xl font-medium mt-2">{productPrice}</p>
                         <p className="text-gray-700 text-lg font-medium mt-2">Product Description: </p>
                         <p className="text-gray-700">{productDescription}</p>
-                        <button className="mt-4 btn btn-primary hover:scale-105">
+                        <button onClick={() => addToCart(_id)} className="mt-4 btn btn-primary hover:scale-105">
                             Add To Cart
                         </button>
                     </div>
