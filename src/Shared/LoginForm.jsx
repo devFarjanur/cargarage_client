@@ -1,16 +1,45 @@
 import { Link } from 'react-router-dom';
 import img from "../assets/images/login/login.svg";
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, getAuth, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from '../../firebase.init';
 import { useState } from 'react';
 
 
 const LoginForm = () => {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(null);
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
     const auth = getAuth(app);
     console.log(app);
     const googleProvider = new GoogleAuthProvider();
     // const githubProvider = new GithubAuthProvider();
+
+
+    const handleLogin = (event) => {
+
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const loggedUser = result.loggedUser;
+                setSuccess('user login successfully');
+                console.log(loggedUser);
+            })
+            .catch(error => {
+                console.log(error);
+                setError(error.message);
+            })
+
+
+    }
+
+    const handleResetPassword = event => {
+
+    }
 
 
 
@@ -53,20 +82,6 @@ const LoginForm = () => {
             })
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
-        console.log(email, password)
-        createUserWithEmailAndPassword(auth, email, password)
-        .then(result => {
-            const loggedUser = result.user;
-            console.log(loggedUser);
-        } )
-        .catch(error => {
-            console.log(error);
-        })
-    }
 
 
     return (
@@ -77,9 +92,9 @@ const LoginForm = () => {
                 </div>
                 <div className="pr-10 border-[1px] border-[#D0D0D0] w-[611px] h-[782px] mt-20 px-20 bg-white rounded shadow-md">
                     <h2 className="text-4xl font-semibold text-center pt-20 pb-8 text-black">Log in</h2>
-                    <form onSubmit={handleSubmit} className="mt-4">
+                    <form onSubmit={handleLogin} className="mt-4">
                         <div className="mb-4">
-                            <label htmlFor="username" className="text-[#444] text-lg font-medium mb-5">
+                            <label htmlFor="email" className="text-[#444] text-lg font-medium mb-5">
                                 Email
                             </label>
                             <input
@@ -87,8 +102,8 @@ const LoginForm = () => {
                                 id="email"
                                 name="email"
                                 className="form-input bg-white w-[461px] h-[60px] border-[1px] hover:border-[1px] border-[#E8E8E8] mt-5 pl-6 rounded"
-                                placeholder="Your email"
-
+                                placeholder="email"
+                                required
                             />
                         </div>
                         <div className="mb-4">
@@ -101,7 +116,11 @@ const LoginForm = () => {
                                 name="password"
                                 className="form-input bg-white w-[461px] h-[60px] border-[1px] hover:border-[1px] border-[#E8E8E8] mt-5 pl-6 rounded"
                                 placeholder="Your password"
+                                required
                             />
+                            <label className="label">
+                                <a onClick={handleResetPassword} href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                            </label>
                         </div>
                         <div className="px-20px mt-7">
                             <button
@@ -158,6 +177,9 @@ const LoginForm = () => {
                     <div>
                         <p className="text-center pt-10">Login as an <Link to="/admin" className='text-[#FF3811]'>Admin</Link>? or <Link to="/" className='text-[#FF3811]'>Home</Link></p>
                     </div>
+
+                    <p>{error}</p>
+                    <p>{success}</p>
 
 
 
