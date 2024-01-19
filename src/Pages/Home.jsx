@@ -3,10 +3,8 @@ import Footer from "../Shared/Footer";
 import HomeAbout from "../Shared/Home/HomeAbout";
 import HomeBanner from "../Shared/Home/HomeBanner";
 import HomeContact from "../Shared/Home/HomeContact";
-import HomeFeatures from "../Shared/Home/HomeFeatures";
 import HomeProducts from "../Shared/Home/HomeProducts";
 import HomeServices from "../Shared/Home/HomeServices";
-import HomeTeam from "../Shared/Home/HomeTeam";
 import Navbar from "../Shared/Navbar";
 
 
@@ -20,8 +18,6 @@ const Home = () => {
             <HomeProducts></HomeProducts>
             <HomeContact></HomeContact>
             <HomeServices></HomeServices>
-            <HomeTeam></HomeTeam>
-            <HomeFeatures></HomeFeatures>
             <Footer></Footer>
         </div>
     );
